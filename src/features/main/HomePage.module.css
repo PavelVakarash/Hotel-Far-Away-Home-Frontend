@@ -1,0 +1,65 @@
+.header {
+    padding: 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #fff;
+    background-image: url('/public/photo-hotel-far-away-home/hotel_farAwayHome.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 610px;
+}
+
+.header_text {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#fff;
+    font-size: 27px;
+    margin-top: 300px;
+    padding: 0px 20px;
+}
+
+.header_button {
+    padding: 10px;
+    margin: 1px;
+    border: none;
+    border-radius: 3px;
+    background-color:#fff;
+    color:black;
+    font-size: 18px;
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_button:hover {
+    background-color: rgba(200, 200, 200, 1);
+}
+
+.header_button span {
+    margin-right: 170px;
+}
+
+.header_button img {
+    margin-left: 170px;
+}
+
+.header_buttonContainer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: none;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+.image_container {
+    position: relative;
+  }
+  
+  .image_container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
