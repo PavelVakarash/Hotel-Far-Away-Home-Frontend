@@ -1,0 +1,101 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    justify-content:space-evenly;
+    padding: 20px;
+}
+
+.footer_menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    margin-top: 40px;
+    display: flex;
+}
+
+.mainMenu {
+    margin-right: 100px;
+}
+
+.callMenu {
+    margin-left: 130px;
+}
+
+.info {
+    display: flex;
+    margin-top: 50px;
+    border-top: 1px solid gray;
+}
+
+.mainInfo {
+    margin-top: 40px;
+    margin-right: 100px;
+}
+
+.socialInfo {
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.footer_text {
+    position: relative;
+    margin-right: 20px;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.info_text {
+    position: relative;
+    margin-right: 20px;
+    color:darkgrey;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+    width: 140px;
+    height: 140px;
+}
+
+.logoContainer {
+    display:flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.footer_text:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.footer_text:hover::before {
+    transform: scaleX(1);
+}
+
+.icon {
+    width: 14px;
+    height: 14px;
+}
+
+.socialIcon {
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+}
+
+.scrollToTop {
+    margin-left: 16px;
+    cursor: pointer;
+}

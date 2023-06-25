@@ -1,0 +1,48 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    flex-wrap: wrap;
+    background: rgb(215, 215, 215);
+    background: linear-gradient(90deg, rgba(215, 215, 215, 1) 0%, rgba(161, 161, 172, 1) 58%, rgba(127, 162, 182, 1) 100%);
+}
+
+.navBar_text {
+    position: relative;
+    margin: 10px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: -10px;
+}
+
+.navBar_text:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.navBar_text:hover::before {
+    transform: scaleX(1);
+}
+
+.icon {
+    width: 14px;
+    height: 14px;
+}

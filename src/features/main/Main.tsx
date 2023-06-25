@@ -1,15 +1,18 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import NavBar from './NavBar';
-import HomePage from './HomePage';
+import Header from '../header/Header';
+import NavBar from '../navbar/NavBar';
+import Footer from '../footer/Footer';
 
 function Main(): JSX.Element {
   return (
     <>
-      <HomePage />
-      <h1 className="mb-1">Список дел Алишера</h1>
-      <Outlet />
       <NavBar />
+      <Header />
+      <Footer />
+      {/* <h1 className="mb-1">Список дел Алишера</h1> */}
+      <Outlet />
+      {/* <NavBar /> */}
     </>
   );
 }
