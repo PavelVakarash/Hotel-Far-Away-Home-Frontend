@@ -31,6 +31,7 @@ function Login(): JSX.Element {
 
       // 332 выводим в консоль ошибку если санк login зареджектился
       if (login.rejected.match(dispatchResult)) {
+        // eslint-disable-next-line no-console
         console.error(dispatchResult.error.message);
       }
     },
