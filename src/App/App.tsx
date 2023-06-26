@@ -11,6 +11,7 @@ import { selectAuthChecked } from '../features/auth/selectors';
 import { useAppDispatch } from '../store';
 import Tasks from '../features/tasks/Tasks';
 import AdminCabinet from '../features/main/AdminCabinet';
+import Overview from '../features/Overview/Overview';
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -37,6 +38,8 @@ function App(): JSX.Element {
           <Route path="/auth/login" element={<Login />} />
           <Route path="/auth/register" element={<Register />} />
           <Route path="/admin/tasks" element={<AdminCabinet />} />
+        </Route>
+        <Route path="/overview" element={<Overview />}>
         </Route>
       </Routes>
     </HashRouter>

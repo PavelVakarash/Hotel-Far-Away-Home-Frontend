@@ -5,7 +5,7 @@ import RoomCard from './room-card/RoomCard';
 function Overview():JSX.Element {
     return (
         <div className={style.container}>
-            <h1 className={style.tytle}>Our rooms and services</h1>
+            <h1 className={style.tytle}>OUR ROOMS AND SERVICES</h1>
             <div className={style.cards}>
                 <RoomCard />
             </div>
