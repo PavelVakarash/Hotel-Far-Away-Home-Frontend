@@ -1,0 +1,64 @@
+.services {
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.service_text {
+    font-size: 1.8vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 2vw;
+    justify-content: center;
+    display: flex;
+}
+
+.serviceContainerTop {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vw;
+}
+
+.serviceContainerBottom {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vw;
+}
+
+.service {
+    width: 30vw;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+.service:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+.serviceContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 30vw;
+    height: 20vw;
+}
+
+.serviceTitle {
+    margin-top: 1vw;
+    font-size: 1.8vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.icon {
+    width: 7vw;
+    height: 7vw;
+    margin-top: 1vw;
+}
