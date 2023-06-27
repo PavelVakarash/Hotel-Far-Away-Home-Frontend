@@ -29,7 +29,6 @@ function App(): JSX.Element {
       </div>
     );
   }
-
   return (
     <HashRouter>
       <Routes>
@@ -44,5 +43,4 @@ function App(): JSX.Element {
     </HashRouter>
   );
 }
-
 export default App;
