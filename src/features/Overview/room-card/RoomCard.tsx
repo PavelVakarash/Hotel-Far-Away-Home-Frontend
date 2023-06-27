@@ -25,7 +25,7 @@ function RoomCard(): JSX.Element {
         </p>
         <div className={style.container_with_icons}>
           <div className={style.icon_text}>
-            <div>
+            <div className={style.small_icon_text}>
               <img src={room} className={style.svg} alt="room" />
             </div>
             <div>
