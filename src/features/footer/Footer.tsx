@@ -6,7 +6,11 @@ function Footer(): JSX.Element {
     const navigate = useNavigate();
     function handleLogoClick(): void {
         navigate('/');
-    }
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     function handleReserveClick(): void {
         navigate('/reserve');
     }
