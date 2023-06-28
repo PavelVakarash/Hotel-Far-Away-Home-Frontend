@@ -1,10 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import style from './Contacts.module.css';
-import NavBar from '../navbar/NavBar';
-import Footer from '../footer/Footer';
 
-function Contacts(): JSX.Element {
+function ContactsCopy(): JSX.Element {
     const navigate = useNavigate();
     function handleGoogleMapClick(): void {
         navigate('/googleMap');
@@ -21,7 +19,6 @@ function Contacts(): JSX.Element {
 
     return (
         <div className={style.contactsContainer}>
-            <NavBar />
             <h1 className={style.contacts_text}>
                 CONTACTS
             </h1>
@@ -54,9 +51,8 @@ function Contacts(): JSX.Element {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }
 
-export default Contacts;
+export default ContactsCopy;
