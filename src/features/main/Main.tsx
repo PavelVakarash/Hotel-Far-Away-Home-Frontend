@@ -5,6 +5,7 @@ import NavBar from '../navbar/NavBar';
 import Footer from '../footer/Footer';
 import OverviewCopy from '../Overview/OverviewCopy';
 import ContactsCopy from '../contacts/ContactsCopy';
+import PhotoGallery from '../photoGallery/PhotoGallery';
 
 function Main(): JSX.Element {
   return (
@@ -12,6 +13,7 @@ function Main(): JSX.Element {
       <NavBar />
       <Header />
       <OverviewCopy />
+      <PhotoGallery />
       <ContactsCopy />
       <Footer />
       {/* <h1 className="mb-1">Список дел Алишера</h1> */}
