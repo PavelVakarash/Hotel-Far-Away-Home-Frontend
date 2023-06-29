@@ -1,0 +1,41 @@
+.videoGallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vw;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(242, 242, 242);
+  }
+  
+  .videoContainer {
+    width: 60vw;
+    height: 35vw;
+    background-color: rgb(242, 242, 242);
+    position: relative;
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+  }
+
+.videoContainer:hover .video::-webkit-media-controls {
+    display: none;
+}
+
+.videoContainer:hover .video::-webkit-media-controls-panel {
+    display: none;
+}
+
+.videoContainer:hover .video::-moz-media-controls-panel {
+    display: none;
+}
+
+.videoContainer:hover .video::-ms-media-controls {
+    display: none;
+}
+
+.videoContainer:hover .video::media-controls {
+    display: none;
+}

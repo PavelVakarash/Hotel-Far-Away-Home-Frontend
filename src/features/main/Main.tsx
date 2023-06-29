@@ -6,6 +6,7 @@ import Footer from '../footer/Footer';
 import OverviewCopy from '../Overview/OverviewCopy';
 import ContactsCopy from '../contacts/ContactsCopy';
 import PhotoGallery from '../photoGallery/PhotoGallery';
+import VideoGallery from '../../videoGallery/VideoGallery';
 
 function Main(): JSX.Element {
   return (
@@ -13,6 +14,7 @@ function Main(): JSX.Element {
       <NavBar />
       <Header />
       <OverviewCopy />
+      <VideoGallery />
       <PhotoGallery />
       <ContactsCopy />
       <Footer />

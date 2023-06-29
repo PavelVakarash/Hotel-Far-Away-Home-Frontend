@@ -19,10 +19,24 @@
 
 .header_button {
     padding: 1vw;
-    margin: 1px;
+    margin: 0.03vw;
     border: none;
     border-radius: 3px;
     background-color: #fff;
+    color: black;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_button_reserve {
+    padding: 1vw;
+    margin-left: 1vw;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(200, 200, 200, 1);
     color: black;
     cursor: pointer;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
