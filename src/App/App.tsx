@@ -11,8 +11,9 @@ import { selectAuthChecked } from '../features/auth/selectors';
 import { useAppDispatch } from '../store';
 import Tasks from '../features/tasks/Tasks';
 import AdminCabinet from '../features/main/AdminCabinet';
-import Overview from '../features/Overview/Overview';
 import Contacts from '../features/contacts/Contacts';
+import Overview from '../features/Overview/Overview';
+import Reserve from '../features/reserve/Reserve';
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -41,7 +42,7 @@ function App(): JSX.Element {
         </Route>
         <Route path="/overview" element={<Overview />} />
         <Route path="/contacts" element={<Contacts />} />
-        {/* <Route path="/reserve" element={<Reserve />} /> */}
+        <Route path="/reserve" element={<Reserve />} />
       </Routes>
     </HashRouter>
   );
