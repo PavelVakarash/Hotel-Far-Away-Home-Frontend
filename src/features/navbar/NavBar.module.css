@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     background: rgb(215, 215, 215);
     background: linear-gradient(90deg, rgba(215, 215, 215, 1) 0%, rgba(161, 161, 172, 1) 58%, rgba(127, 162, 182, 1) 100%);
+    z-index: 1;
 }
 
 .navBar_text {
@@ -22,6 +23,7 @@
     width: 10vw;
     height: 8vw;
     margin: -2vw;
+    cursor: pointer;
 }
 
 .navBar_text:before {

@@ -4,6 +4,13 @@ import style from './Footer.module.css';
 
 function Footer(): JSX.Element {
     const navigate = useNavigate();
+    function handleLogoClick(): void {
+        navigate('/');
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     function handleReserveClick(): void {
         navigate('/reserve');
     }
@@ -41,7 +48,7 @@ function Footer(): JSX.Element {
 
     return (
         <div className={style.footer}>
-            <div className={style.logoContainer}>
+            <div className={style.logoContainer} onClick={handleLogoClick}>
                 <img src="/logo-hotel-far-away-home/hotel-far-away-home.png" alt="Logo" className={style.logo} />
             </div>
             <div className={style.footer_menu}>

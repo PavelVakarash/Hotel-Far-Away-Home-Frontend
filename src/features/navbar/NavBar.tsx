@@ -4,6 +4,13 @@ import style from './NavBar.module.css';
 
 function NavBar(): JSX.Element {
     const navigate = useNavigate();
+    function handleLogoClick(): void {
+        navigate('/');
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     function handleReserveClick(): void {
         navigate('/reserve');
     }
@@ -41,7 +48,7 @@ function NavBar(): JSX.Element {
 
     return (
         <div className={style.navBar}>
-            <div className={style.logoContainer}>
+            <div className={style.logoContainer} onClick={handleLogoClick}>
                 <img src="/logo-hotel-far-away-home/hotel-far-away-home.png" alt="Logo" className={style.logo} />
             </div>
             <span className={style.navBar_text} onClick={handleReserveClick}>Reserve</span>

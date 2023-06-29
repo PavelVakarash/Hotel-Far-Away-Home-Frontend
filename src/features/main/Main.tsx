@@ -3,16 +3,18 @@ import { Outlet } from 'react-router-dom';
 import Header from '../header/Header';
 import NavBar from '../navbar/NavBar';
 import Footer from '../footer/Footer';
-import Services from '../services/Services';
-import Overview from '../Overview/Overview';
+import OverviewCopy from '../Overview/OverviewCopy';
+import ContactsCopy from '../contacts/ContactsCopy';
+import PhotoGallery from '../photoGallery/PhotoGallery';
 
 function Main(): JSX.Element {
   return (
     <>
       <NavBar />
       <Header />
-      <Overview />
-      <Services />
+      <OverviewCopy />
+      <PhotoGallery />
+      <ContactsCopy />
       <Footer />
       {/* <h1 className="mb-1">Список дел Алишера</h1> */}
       <Outlet />
