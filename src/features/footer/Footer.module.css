@@ -97,6 +97,12 @@
 }
 
 .scrollToTop {
-    margin-left: 1.6vw;
     cursor: pointer;
+    position: fixed;
+    bottom: 4vw;
+    right: 4vw;
+    z-index: 2;
+    border-radius: 40%;
+    width: 2vw;
+    height: 2vw;
 }

@@ -13,6 +13,9 @@ function Header(): JSX.Element {
     function handleGuestsClick(): void {
         navigate('/guests');
     }
+    function handleReserveRoomClick(): void {
+        navigate('/guests');
+    }
 
     return (
         <div className={style.header}>
@@ -28,6 +31,8 @@ function Header(): JSX.Element {
                 </button>
                 <button className={style.header_button} type="button" onClick={handleGuestsClick}>Guests
                     <img className={style.icon} src="/icons-hotel-far-away-home/stick-man.png" alt="Guests" />
+                </button>
+                <button className={style.header_button_reserve} type="button" onClick={handleReserveRoomClick}>Reserve Room
                 </button>
             </div>
         </div>
