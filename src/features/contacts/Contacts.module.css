@@ -64,13 +64,14 @@
     padding: 0.7vw 1vw;
     border: none;
     border-radius: 0.5vw;
-    background: linear-gradient(to bottom, #000000 0%, #000000 33.33%, #FF0000 33.33%, #FF0000 66.67%, #FFCE00 66.67%, #FFCE00 100%);
-    color: #fff;
+    /* background: linear-gradient(to bottom, #000000 0%, #000000 33.33%, #FF0000 33.33%, #FF0000 66.67%, #FFCE00 66.67%, #FFCE00 100%); */
+    background: silver;
+    color: brown;
     font-size: 1.3vw;
     cursor: pointer;
-    font-family: 'Old Standard TT', serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     opacity: 1;
-    animation: pulse 2s ease-in-out infinite;
+    animation: pulse 3s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -78,7 +79,7 @@
       opacity: 1;
     }
     50% {
-      opacity: 0.7;
+      opacity: 0.6;
     }
     100% {
       opacity: 1;
