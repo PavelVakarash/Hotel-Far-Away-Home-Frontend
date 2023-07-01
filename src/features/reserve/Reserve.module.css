@@ -1,0 +1,70 @@
+.reserve_text {
+    font-size: 1.8vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 2vw;
+    justify-content: center;
+    display: flex;
+}
+.banner{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.form_cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background-image: url("/src/features/reserve/hotel.jpg");
+}
+.form{
+    padding: 40px;
+    display: flex;
+    column-gap: 30px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+   
+}
+.top,
+.details
+{
+    margin: 30px;
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:40px
+}
+.field,
+.item
+{
+    display: flex;
+    gap:20px;
+    font-size: 1.6vw;
+    cursor: pointer;
+color: white;
+}
+.field_room{
+    width:100px;
+    height: 40px;
+}
+select{
+    width:50px;
+    height: 40px;
+}
+
+button{
+    width:200px;
+    height: 80px;
+    border-radius: 25%;
+    font-size: 1.7vw;
+    align-self: center;
+}
+input{
+    width: 200px;
+    border:none;
+    cursor: pointer;
+}
