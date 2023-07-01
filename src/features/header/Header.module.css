@@ -59,6 +59,8 @@
     background-color: none;
     flex-wrap: wrap;
     margin: 5px;
+    row-gap: 10px;
+    column-gap: 10px;
 }
 
 .icon {

@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.0.6",
     "cpuid": "^0.1.3",
     "react": "^18.2.0",
+    "react-datepicker": "^4.15.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
@@ -95,6 +96,7 @@
   },
   "devDependencies": {
     "@types/css-modules": "^1.0.2",
+    "@types/react-datepicker": "^4.11.2",
     "eslint": "^8.23.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",

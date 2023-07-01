@@ -40,7 +40,6 @@
 
 .icon_text {
     height: 45px;
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -63,7 +62,7 @@
 
 .reserve {
     width: 400px;
-    height: 35px;
+    height: 50px;
     color: black;
     background-color: white;
     border-radius: 10px;
