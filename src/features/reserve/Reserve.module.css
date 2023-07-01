@@ -4,12 +4,14 @@
     padding-top: 2vw;
     justify-content: center;
     display: flex;
+    
 }
 .banner{
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: rgb(242, 242, 242);
 }
 .form_cont{
     width: 100%;
@@ -18,6 +20,7 @@
     align-items: center;
     gap: 50px;
     background-image: url("/src/features/reserve/hotel.jpg");
+   padding-bottom: 30px;
 }
 .form{
     padding: 40px;

@@ -1,10 +1,13 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import style from './Reserve.module.css';
+import NavBar from '../navbar/NavBar';
+import Footer from '../footer/Footer';
 
 function Reserve():JSX.Element {
     return (
     <div className={style.testbox}>
+        <NavBar />
         <div className={style.banner}>
         <h1 className={style.reserve_text}>HOTEL RESERVATION FORM</h1>
         </div>
@@ -78,6 +81,7 @@ function Reserve():JSX.Element {
                     <button type="submit">Search</button>
                 </div>
             </form>
+            <Footer />
     </div>
     );
 }
