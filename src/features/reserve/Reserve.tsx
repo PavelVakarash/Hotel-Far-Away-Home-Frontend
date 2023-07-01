@@ -16,16 +16,16 @@ function Reserve():JSX.Element {
                 <div className={style.top}>
                     <div className={style.field}>
                     <label htmlFor="checkindate">Check-in Date</label>
-                        <input id="checkindate" type="date" name="checkindate" />
+                        <input className={style.input} id="checkindate" type="date" name="checkindate" />
                     </div>
                     <div className={style.field}>
                     <label htmlFor="checkindate">Check-out Date</label>
-                            <input id="checkoutdate" type="date" name="checkoutdate" />
+                            <input className={style.input} id="checkoutdate" type="date" name="checkoutdate" />
 
                     </div>
                     <div className={style.field}>
                         <p>Number of adults</p>
-                        <select>
+                        <select className={style.select}>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -38,7 +38,7 @@ function Reserve():JSX.Element {
                     </div>
                     <div className={style.field}>
                         <p>Number of childrens</p>
-                        <select>
+                        <select className={style.select}>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -61,24 +61,24 @@ function Reserve():JSX.Element {
                 <div className={style.details}>
                     <div className={style.item}>
                         <label htmlFor={style.fname}>First Name</label>
-                        <input id="fname" type="text" name="fname" />
+                        <input className={style.input} id="fname" type="text" name="fname" />
                     </div>
                     <div className={style.item}>
                         <label htmlFor={style.fname}>Last Name</label>
-                        <input id="lname" type="text" name="lname" />
+                        <input className={style.input} id="lname" type="text" name="lname" />
                     </div>
                     <div className={style.item}>
                             <label htmlFor="eaddress">Email Address</label>
-                            <input id="eaddress" type="text" name="eaddress" />
+                            <input className={style.input} id="eaddress" type="text" name="eaddress" />
                     </div>
                     <div className={style.item}>
                             <label htmlFor="phone">Phone</label>
-                            <input id="phone" type="tel" name="phone" />
+                            <input className={style.input} id="phone" type="tel" name="phone" />
                     </div>
                 </div>
             </div>
                 <div className={style.btn_block}>
-                    <button type="submit">Search</button>
+                    <button className={style.button} type="submit">Search</button>
                 </div>
             </form>
             <Footer />
