@@ -14,6 +14,9 @@ import AdminCabinet from '../features/main/AdminCabinet';
 import Contacts from '../features/contacts/Contacts';
 import Overview from '../features/Overview/Overview';
 import Reserve from '../features/reserve/Reserve';
+import Events from '../features/events/Events';
+import Rooms from '../features/rooms/Rooms';
+import RoomCard from '../features/Overview/room-card/RoomCard';
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -43,6 +46,10 @@ function App(): JSX.Element {
         <Route path="/overview" element={<Overview />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/reserve" element={<Reserve />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/rooms" element={<Rooms />}>
+          <Route path=":id" element={<RoomCard />} />
+        </Route>
       </Routes>
     </HashRouter>
   );

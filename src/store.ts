@@ -6,6 +6,7 @@ import authSlice from './features/auth/authSlice';
 import bookingsSlice from './features/bookings/bookingsSlice';
 import roomsSlice from './features/rooms/roomsSlice';
 import usersSlice from './features/users/usersSlice';
+import eventsSlice from './features/events/eventsSlice';
 
 const store = configureStore({
   reducer: {
@@ -13,7 +14,8 @@ const store = configureStore({
     tasks: tasksSlice,
     bookings: bookingsSlice,
     rooms: roomsSlice,
-    users: usersSlice
+    users: usersSlice,
+    events: eventsSlice
   },
 });
 

@@ -1,0 +1,21 @@
+.eventsListContainer {
+    display: 'flex';
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 6vw;
+    border-radius: 0.5vw;
+    margin: 2vw;
+  }
+
+  .eventsListText {
+    font-size: 2vw;
+    margin-bottom: 0vw;
+  }
+
+  .eventsListPlaceholder {
+    color: #888;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
