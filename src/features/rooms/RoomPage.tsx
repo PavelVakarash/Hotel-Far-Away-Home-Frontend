@@ -17,9 +17,9 @@ export default function RoomPage(): JSX.Element {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [number, setNumber] = useState<number>(0);
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  const [check_in, setCheck_in] = useState<Date>(new Date(2023, 5, 19, 25, 65));
+  const [cheCkIn, setCheck_in] = useState<Date>(new Date(2023, 5, 19, 25, 65));
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  const [check_out, setCheck_out] = useState<Date>(
+  const [checkOut, setCheck_out] = useState<Date>(
     new Date(2023, 5, 19, 25, 65)
   );
   function handleSubmit(event: FormEvent<HTMLFormElement>): void {
@@ -27,8 +27,8 @@ export default function RoomPage(): JSX.Element {
     dispatch(
       createBooking({
         room_id: Number(id),
-        check_in,
-        check_out,
+        cheCkIn,
+        checkOut,
 
       })
     );
