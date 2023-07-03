@@ -14,6 +14,7 @@ export default function RoomPage(): JSX.Element {
   useEffect(() => {
     dispatch(getRoom(Number(id)));
   }, [id, dispatch]);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [number, setNumber] = useState<number>(0);
   // eslint-disable-next-line @typescript-eslint/naming-convention
   const [check_in, setCheck_in] = useState<Date>(new Date(2023, 5, 19, 25, 65));

@@ -6,13 +6,14 @@ import { createRoom } from './roomsSlice';
 export default function CreateRoom(): JSX.Element {
   const [number, setNumber] = React.useState(0);
   // eslint-disable-next-line @typescript-eslint/naming-convention
-  const [type_of_room, setRoom] = React.useState('standart');
+  const [typeOfRoom, setRoom] = React.useState('standart');
   const [price, setPrice] = React.useState(0);
   const dispatch = useAppDispatch();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const navigate = useNavigate();
   function handleSubmit(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    dispatch(createRoom({ number, type_of_room, price }));
+    dispatch(createRoom({ number, typeOfRoom, price }));
    // navigate('/rooms');
   }
   return (
