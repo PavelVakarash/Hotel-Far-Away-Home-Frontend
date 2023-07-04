@@ -6,6 +6,7 @@ import RoomCredentials from './types/RoomCredentials';
 const initialState: RoomsState = {
     rooms: [],
     error: undefined,
+    currentRoom: undefined,
 };
 // eslint-disable-next-line import/prefer-default-export
 export const loadRooms = createAsyncThunk('rooms/loadRooms', () =>
@@ -14,7 +15,10 @@ export const loadRooms = createAsyncThunk('rooms/loadRooms', () =>
 export const deleteRoom = createAsyncThunk('rooms/deleteRoom', (id: number) =>
     api.deleteRoom(id)
 );
-export const createRoom = createAsyncThunk('rooms/createRoom', (credentials:RoomCredentials) =>
+export const getRoom = createAsyncThunk('rooms/getRoom', (id: number) =>
+    api.getRoom(id)
+);
+export const createRoom = createAsyncThunk('rooms/createRoom', (credentials: RoomCredentials) =>
     api.createRoom(credentials)
 );
 const roomsSlice = createSlice({
@@ -31,7 +35,7 @@ const roomsSlice = createSlice({
                 state.error = action.error.message;
             })
             .addCase(loadRooms.fulfilled, (state, action) => {
-                state.rooms = action.payload.rooms;
+                state.rooms = action.payload.data;
             })
             .addCase(deleteRoom.rejected, (state, action) => {
                 state.error = action.error.message;
@@ -44,6 +48,12 @@ const roomsSlice = createSlice({
             })
             .addCase(createRoom.fulfilled, (state, action) => {
                 state.rooms.push(action.payload);
+            })
+            .addCase(getRoom.rejected, (state, action) => {
+                state.error = action.error.message;
+            })
+            .addCase(getRoom.fulfilled, (state, action) => {
+                state.currentRoom = action.payload;
             });
     },
 });

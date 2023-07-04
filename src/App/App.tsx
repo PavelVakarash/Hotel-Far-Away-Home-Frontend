@@ -14,9 +14,11 @@ import AdminCabinet from '../features/main/AdminCabinet';
 import Contacts from '../features/contacts/Contacts';
 import Overview from '../features/Overview/Overview';
 import Reserve from '../features/reserve/Reserve';
-import Events from '../features/events/Events';
 import Rooms from '../features/rooms/Rooms';
-import RoomCard from '../features/Overview/room-card/RoomCard';
+import CreateRoom from '../features/rooms/CreateRoom';
+import Layout from '../features/layout/Layout';
+import RoomPage from '../features/rooms/RoomPage';
+import Events from '../features/events/Events';
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -37,18 +39,20 @@ function App(): JSX.Element {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Main />}>
+        <Route path="/" element={<Layout />}>
           <Route path="/tasks" element={<Tasks />} />
+          <Route path="/" element={<Main />} />
           <Route path="/auth/login" element={<Login />} />
           <Route path="/auth/register" element={<Register />} />
           <Route path="/admin/tasks" element={<AdminCabinet />} />
-        </Route>
-        <Route path="/overview" element={<Overview />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/reserve" element={<Reserve />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/rooms" element={<Rooms />}>
-          <Route path=":id" element={<RoomCard />} />
+          <Route path="/overview" element={<Overview />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/reserve" element={<Reserve />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/rooms" element={<Rooms />}>
+            <Route path=":id" element={<RoomPage />} />
+          </Route>
+          <Route path="/rooms/create" element={<CreateRoom />} />
         </Route>
       </Routes>
     </HashRouter>

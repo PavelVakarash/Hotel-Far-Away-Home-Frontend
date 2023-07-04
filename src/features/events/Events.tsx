@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import EventsForm from './events-form/EventsForm';
 import EventsList from './events-list/EventsList';
-import NavBar from '../navbar/NavBar';
-import Footer from '../footer/Footer';
 import style from './Events.module.css';
 
 function Events(): JSX.Element {
@@ -14,7 +12,6 @@ function Events(): JSX.Element {
 
   return (
     <div id="events">
-      <NavBar />
       <div className={style.eventsContainer}>
         <div className={showForm ? `${style.eventsFormContainer} ${style.slideIn}` : `${style.eventsFormContainer} ${style.slideOut}`}>
           {!showForm && (
@@ -26,7 +23,6 @@ function Events(): JSX.Element {
         </div>
         <div className={style.listContainer}><EventsList /></div>
       </div>
-      <Footer />
     </div>
   );
 }

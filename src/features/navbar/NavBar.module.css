@@ -14,9 +14,14 @@
 .navBar_text {
     position: relative;
     color: #fff;
-    font-size: 1.5vw;
+    text-decoration: none;
+    font-size: 1.35vw;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navBar_text:hover {
+    color: #fff;
 }
 
 .logo {

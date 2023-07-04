@@ -1,78 +1,112 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import style from './NavBar.module.css';
+import { selectUser } from '../auth/selectors';
+import { logout } from '../auth/authSlice';
+import { useAppDispatch } from '../../store';
 
 function NavBar(): JSX.Element {
-    const navigate = useNavigate();
-    function handleLogoClick(): void {
-        navigate('/');
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
+  const navigate = useNavigate();
+  const user = useSelector(selectUser);
+  function handleLogoClick(): void {
+    navigate('/');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+  const dispatch = useAppDispatch();
+  const handleLogout = React.useCallback(
+    async (event: React.MouseEvent) => {
+      event.preventDefault();
+      const dispatchResult = await dispatch(logout());
+      if (logout.fulfilled.match(dispatchResult)) {
+        navigate('/auth/login');
       }
-    function handleReserveClick(): void {
-        navigate('/reserve');
-    }
-    function handleEventsClick(): void {
-        navigate('/events');
-    }
-    function handleContactsClick(): void {
-        navigate('/contacts');
-    }
-    function handlePhoneClick(): void {
-        navigate('/phone');
-    }
-    function handleOverviewClick(): void {
-        navigate('/overview');
-    }
-    function handleRequestCallClick(): void {
-        navigate('/requestCall');
-    }
-    function handleRuClick(): void {
-        navigate('/ru');
-    }
-    function handleDeClick(): void {
-        navigate('/de');
-    }
-    function handleEnClick(): void {
-        navigate('/en');
-    }
+    },
+    [dispatch, navigate]
+  );
 
-    const handleScrollToBottom = (): void => {
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: 'smooth'
-        });
-    };
+  const handleScrollToDown = (): void => {
+    window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth'
+    });
+};
 
-    return (
-        <div className={style.navBar}>
-            <div className={style.logoContainer} onClick={handleLogoClick}>
-                <img src="/logo-hotel-far-away-home/hotel-far-away-home.png" alt="Logo" className={style.logo} />
-            </div>
-            <span className={style.navBar_text} onClick={handleReserveClick}>Reserve</span>
-            <span className={style.navBar_text} onClick={handleOverviewClick}>Overview</span>
-            <span className={style.navBar_text} onClick={handleEventsClick}>Events</span>
-            <span className={style.navBar_text} onClick={handleContactsClick}>Contacts</span>
-            <span className={style.navBar_text} onClick={handlePhoneClick}>+0 123 456 78 90</span>
-            <span className={style.navBar_text} onClick={handleRequestCallClick}>Request a Call
-            </span>
-            <span className={style.navBar_text} onClick={handleDeClick}>
-                <img src="/icons-hotel-far-away-home/germany.png" alt="DE" className={style.icon} />
-                DE
-            </span>
-            <span className={style.navBar_text} onClick={handleRuClick}>
-                <img src="/icons-hotel-far-away-home/russia.png" alt="RU" className={style.icon} />
-                RU
-            </span>
-            <span className={style.navBar_text} onClick={handleEnClick}>
-                <img src="/icons-hotel-far-away-home/united-kingdom.png" alt="EN" className={style.icon} />
-                EN
-            </span>
-            <span className={style.navBar_text} onClick={handleScrollToBottom}>{'\u2193'}</span>
-        </div>
-    );
+  return (
+    <div className={style.navBar}>
+      <div className={style.logoContainer} onClick={handleLogoClick}>
+        <img
+          src="/logo-hotel-far-away-home/hotel-far-away-home.png"
+          alt="Logo"
+          className={style.logo}
+        />
+      </div>
+      <NavLink className={style.navBar_text} to="/reserve">
+        Reserve
+      </NavLink>
+      <NavLink className={style.navBar_text} to="/overview">
+        Overview
+      </NavLink>
+      {user && user.role === 'ADMIN' && (
+        <NavLink className={style.navBar_text} to="/rooms/create">
+          Create room
+        </NavLink>
+      )}
+      <NavLink className={style.navBar_text} to="/rooms">
+        Rooms
+      </NavLink>
+      <NavLink className={style.navBar_text} to="/events">
+        Events
+      </NavLink>
+      {!user ? (
+        <NavLink className={style.navBar_text} to="/auth/login">
+          Login
+        </NavLink>
+      ) : (
+        <NavLink className={style.navBar_text} onClick={handleLogout} to="#">
+          Logout
+        </NavLink>
+      )}
+      <NavLink className={style.navBar_text} to="/contacts">
+        Contacts
+      </NavLink>
+      <NavLink className={style.navBar_text} to="/">
+        +0 123 456 78 90
+      </NavLink>
+      <NavLink className={style.navBar_text} to="/">
+        Request a Call
+      </NavLink>
+      <NavLink className={style.navBar_text} to="/">
+        <img
+          src="/icons-hotel-far-away-home/germany.png"
+          alt="DE"
+          className={style.icon}
+        />
+        DE
+      </NavLink>
+      <NavLink className={style.navBar_text} to="/">
+        <img
+          src="/icons-hotel-far-away-home/russia.png"
+          alt="RU"
+          className={style.icon}
+        />
+        RU
+      </NavLink>
+      <NavLink className={style.navBar_text} to="/">
+        <img
+          src="/icons-hotel-far-away-home/united-kingdom.png"
+          alt="EN"
+          className={style.icon}
+        />
+        EN
+      </NavLink>
+      <NavLink className={style.navBar_text} onClick={handleScrollToDown} to="/">
+      {'\u2193'}
+      </NavLink>
+    </div>
+  );
 }
-
 export default NavBar;

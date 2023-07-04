@@ -1,5 +1,5 @@
 export default interface RoomCredentials {
     number:number;
-    type_of_room: string;
+    typeOfRoom: string;
     price: number;
 }
