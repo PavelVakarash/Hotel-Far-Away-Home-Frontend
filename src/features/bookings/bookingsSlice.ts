@@ -6,17 +6,21 @@ import BookingCredentials from './types/BookingCredentials';
 const initialState: BookingsState = {
     bookings: [],
     error: undefined,
+    usersBookings: []
 };
 
 // eslint-disable-next-line import/prefer-default-export
 export const loadBookings = createAsyncThunk('bookings/loadBookings', () =>
     api.getBookings()
 );
+export const loadMyBookings = createAsyncThunk('bookings/loadMyBookings', () =>
+    api.getMyBookings()
+);
 
 export const deleteBooking = createAsyncThunk('bookings/deleteBooking', (id: number) =>
     api.deleteBooking(id)
 );
-export const createBooking = createAsyncThunk('bookings/createBooking', (credentials:BookingCredentials) =>
+export const createBooking = createAsyncThunk('bookings/createBooking', (credentials: BookingCredentials) =>
     api.createBooking(credentials)
 );
 const bookingsSlice = createSlice({
@@ -46,6 +50,12 @@ const bookingsSlice = createSlice({
             })
             .addCase(createBooking.fulfilled, (state, action) => {
                 state.bookings.push(action.payload);
+            })
+            .addCase(loadMyBookings.rejected, (state, action) => {
+                state.error = action.error.message;
+            })
+            .addCase(loadMyBookings.fulfilled, (state, action) => {
+                state.usersBookings = action.payload;
             });
     },
 });

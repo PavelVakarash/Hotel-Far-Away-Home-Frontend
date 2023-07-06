@@ -5,6 +5,7 @@ import { useAppDispatch } from '../../store';
 import { deleteRoom, loadRooms } from './roomsSlice';
 import { selectRooms } from './selectors';
 import { selectUser } from '../auth/selectors';
+import style from './Rooms.module.css';
 
 export default function Rooms(): JSX.Element {
   const rooms = useSelector(selectRooms);
@@ -17,11 +18,10 @@ export default function Rooms(): JSX.Element {
   return id ? (
     <Outlet />
   ) : (
-    <div>
-      <div>Rooms</div>
+    <div className={style.rooms_cont}>
       {rooms &&
         rooms.map((el) => (
-          <div key={el.id}>
+          <div className={style.room_card} key={el.id}>
             {el.number}
             <p>{el.typeOfRoom}</p>
             <p>{el.price}</p>
@@ -30,7 +30,7 @@ export default function Rooms(): JSX.Element {
                 Delete room
               </button>
             )}
-             <Link to={el.id.toString()}>About room</Link>
+             <Link className={style.link} to={el.id.toString()}>About room</Link>
           </div>
         ))}
     </div>

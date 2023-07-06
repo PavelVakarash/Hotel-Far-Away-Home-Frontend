@@ -19,6 +19,7 @@ import CreateRoom from '../features/rooms/CreateRoom';
 import Layout from '../features/layout/Layout';
 import RoomPage from '../features/rooms/RoomPage';
 import Events from '../features/events/Events';
+import MyReserve from '../features/reserve/MyReserve';
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -53,6 +54,7 @@ function App(): JSX.Element {
             <Route path=":id" element={<RoomPage />} />
           </Route>
           <Route path="/rooms/create" element={<CreateRoom />} />
+          <Route path="/my-reserve" element={<MyReserve />} />
         </Route>
       </Routes>
     </HashRouter>

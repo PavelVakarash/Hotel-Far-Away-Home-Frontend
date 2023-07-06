@@ -5,12 +5,14 @@ import { useAppDispatch } from '../../store';
 import { createBooking } from '../bookings/bookingsSlice';
 import { getRoom } from './roomsSlice';
 import { selectRoom } from './selectors';
+import { selectUser } from '../auth/selectors';
 
 export default function RoomPage(): JSX.Element {
   const dispatch = useAppDispatch();
   const { id } = useParams();
   const [flag, setFlag] = useState<boolean>(false);
   const room = useSelector(selectRoom);
+  const currentUser = useSelector(selectUser);
   useEffect(() => {
     dispatch(getRoom(Number(id)));
   }, [id, dispatch]);
@@ -26,10 +28,10 @@ export default function RoomPage(): JSX.Element {
     event.preventDefault();
     dispatch(
       createBooking({
-        room_id: Number(id),
+        roomIds: [Number(id)],
         cheCkIn,
         checkOut,
-
+        userId: currentUser?.id || 0,
       })
     );
   }
@@ -46,11 +48,6 @@ export default function RoomPage(): JSX.Element {
         </button>
         {flag && (
           <form onSubmit={handleSubmit}>
-            <input
-              type="number"
-              placeholder="number"
-              onChange={(event) => setNumber(Number(event.target.value))}
-            />
             <input
               type="date"
               placeholder="check in"

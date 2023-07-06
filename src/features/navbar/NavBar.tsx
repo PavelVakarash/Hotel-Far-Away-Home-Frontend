@@ -66,9 +66,12 @@ function NavBar(): JSX.Element {
           Login
         </NavLink>
       ) : (
-        <NavLink className={style.navBar_text} onClick={handleLogout} to="#">
-          Logout
-        </NavLink>
+        <><NavLink className={style.navBar_text} onClick={handleLogout} to="#">
+            Logout
+          </NavLink><NavLink className={style.navBar_text} to="/my-reserve">
+              My reserve
+                    </NavLink>
+        </>
       )}
       <NavLink className={style.navBar_text} to="/contacts">
         Contacts

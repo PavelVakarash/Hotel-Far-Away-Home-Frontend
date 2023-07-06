@@ -1,5 +1,6 @@
 export default interface BookingCredentials {
-    room_id: number;
+    roomIds: number[];
+    userId:number;
     cheCkIn: Date;
     checkOut: Date;
 }

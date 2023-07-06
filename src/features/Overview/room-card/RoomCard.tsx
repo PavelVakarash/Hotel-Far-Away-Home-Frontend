@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import style from './RoomCard.module.css';
 import image1 from './small-hotel-room.jpg';
 import image2 from './double-bed.jpg';
@@ -58,9 +59,9 @@ function RoomCard(): JSX.Element {
           </div>
         </div>
         <div className={style.button_reserve}>
-          <button type="button" className={style.reserve}>
+          <Link to="/rooms" className={style.reserve}>
             Reserve
-          </button>
+          </Link>
         </div>
       </div>
       <div className={style.card_container}>
@@ -107,9 +108,9 @@ function RoomCard(): JSX.Element {
           </div>
         </div>
         <div className={style.button_reserve}>
-          <button type="button" className={style.reserve}>
+        <Link to="/rooms" className={style.reserve}>
             Reserve
-          </button>
+        </Link>
         </div>
       </div>
       <div className={style.card_container}>
@@ -156,9 +157,9 @@ function RoomCard(): JSX.Element {
           </div>
         </div>
         <div className={style.button_reserve}>
-          <button type="button" className={style.reserve}>
+        <Link to="/rooms" className={style.reserve}>
             Reserve
-          </button>
+        </Link>
         </div>
       </div>
       <div className={style.card_container}>
@@ -207,9 +208,9 @@ function RoomCard(): JSX.Element {
           </div>
         </div>
         <div className={style.button_reserve}>
-          <button type="button" className={style.reserve}>
+        <Link to="/rooms" className={style.reserve}>
             Reserve
-          </button>
+        </Link>
         </div>
       </div>
       <div className={style.card_container}>
@@ -259,9 +260,9 @@ function RoomCard(): JSX.Element {
           </div>
         </div>
         <div className={style.button_reserve}>
-          <button type="button" className={style.reserve}>
+        <Link to="/rooms" className={style.reserve}>
             Reserve
-          </button>
+        </Link>
         </div>
       </div>
       <div className={style.card_container}>
@@ -308,9 +309,9 @@ function RoomCard(): JSX.Element {
           </div>
         </div>
         <div className={style.button_reserve}>
-          <button type="button" className={style.reserve}>
+        <Link to="/rooms" className={style.reserve}>
             Reserve
-          </button>
+        </Link>
         </div>
       </div>
     </>

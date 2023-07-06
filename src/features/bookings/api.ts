@@ -1,9 +1,14 @@
 import Booking from './types/Booking';
 import BookingCredentials from './types/BookingCredentials';
+import IBooking from './types/IBooking';
 
 // eslint-disable-next-line import/prefer-default-export
 export async function getBookings(): Promise<{ bookings: Booking[] }> {
     const result = await fetch('/api/bookings');
+    return result.json();
+}
+export async function getMyBookings(): Promise<IBooking[]> {
+    const result = await fetch('api/bookings/by-user');
     return result.json();
 }
 // return object!!! Natalia

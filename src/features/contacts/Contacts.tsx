@@ -1,8 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import style from './Contacts.module.css';
-import NavBar from '../navbar/NavBar';
-import Footer from '../footer/Footer';
 
 function Contacts(): JSX.Element {
     const navigate = useNavigate();
