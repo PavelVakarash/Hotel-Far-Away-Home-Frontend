@@ -4,4 +4,5 @@ export default interface Event {
     created_at: Date;
     author: string;
     title: string;
+    file: File;
 }
