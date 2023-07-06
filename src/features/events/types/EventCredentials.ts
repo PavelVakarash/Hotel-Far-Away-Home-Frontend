@@ -3,4 +3,5 @@ export default interface EventCredentials {
     created_at: Date;
     author: string;
     title: string;
+    file: File;
 }
