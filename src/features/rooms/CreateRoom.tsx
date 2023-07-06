@@ -2,6 +2,7 @@ import React, { FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../store';
 import { createRoom } from './roomsSlice';
+import style from './CreateRoom.module.css';
 
 export default function CreateRoom(): JSX.Element {
   const [number] = React.useState(0);
@@ -17,21 +18,20 @@ export default function CreateRoom(): JSX.Element {
    // navigate('/rooms');
   }
   return (
-    <>
-      <div>CreateRoom</div>
-      <form onSubmit={handleSubmit}>
-        <select name="type" onChange={(event) => setRoom(event.target.value)}>
+      <form onSubmit={handleSubmit} className={style.create_cont}>
+        <select className={style.select} name="type" onChange={(event) => setRoom(event.target.value)}>
           <option value="STANDART" selected>Standart</option>
           <option value="DUPLEX">Duplex</option>
           <option value="SUITE">Suite</option>
         </select>
         <input
+          className={style.input}
           type="text"
           onChange={(event) => setPrice(Number(event.target.value))}
           placeholder="price"
         />
-        <button type="submit">Create room</button>
+        <button className={style.submit} type="submit">Create room</button>
       </form>
-    </>
+
   );
 }

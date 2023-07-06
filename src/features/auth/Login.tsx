@@ -58,7 +58,7 @@ function Login(): JSX.Element {
 
   return (
     <form className="auth-form" onSubmit={handleSubmit}>
-      <h2>Вход</h2>
+      <h2>Entry</h2>
       {error && (
         <div className="invalid-feedback mb-3" style={{ display: 'block' }}>
           {error}
@@ -66,7 +66,7 @@ function Login(): JSX.Element {
       )}
       <div className="mb-3">
         <label htmlFor="name-input" className="form-label">
-          Имя
+          Name
         </label>
         <input
           type="text"
@@ -79,7 +79,7 @@ function Login(): JSX.Element {
       </div>
       <div className="mb-3">
         <label htmlFor="password-input" className="form-label">
-          Пароль
+          Password
         </label>
         <input
           type="password"
@@ -91,7 +91,7 @@ function Login(): JSX.Element {
         />
       </div>
       <button type="submit" className="btn btn-primary">
-        Войти
+        Login
       </button>
     </form>
   );
