@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import style from './RoomCard.module.css';
 import image1 from './small-hotel-room.jpg';
@@ -11,18 +11,21 @@ import room from './sq.png';
 import men from './men.png';
 import bed from './bed1.png';
 import sq from './frame.png';
+import { LanguageContext } from '../../../LanguageContext';
+import t from '../translation';
 
 function RoomCard(): JSX.Element {
+const { language } = useContext(LanguageContext);
+
   return (
     <>
       <div className={style.card_container}>
         <div>
           <img className={style.image} src={image1} alt="log" />
         </div>
-        <h2 className={style.tytle_room}>Standart with 1 bed</h2>
+        <h2 className={style.tytle_room}>{t('standart1bed', language)}</h2>
         <p className={style.text}>
-          The spacious rooms feature a living room and a bathroom. There is a
-          comfortable working area. An extra bed can be installed on request.
+        {t('standart1bedText', language)}
         </p>
         <div className={style.container_with_icons}>
           <div className={style.icon_text}>
@@ -30,7 +33,7 @@ function RoomCard(): JSX.Element {
               <img src={room} className={style.svg} alt="room" />
             </div>
             <div>
-              <span>1 room</span>
+              <span>{t('1room', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -38,7 +41,7 @@ function RoomCard(): JSX.Element {
               <img src={men} className={style.svg} alt="person" />
             </div>
             <div>
-              <span>2 place</span>
+              <span>{t('2places', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -54,13 +57,13 @@ function RoomCard(): JSX.Element {
               <img src={bed} className={style.svg} alt="bed" />
             </div>
             <div>
-              <span>1 bed</span>
+              <span>{t('1bed', language)}</span>
             </div>
           </div>
         </div>
         <div className={style.button_reserve}>
           <Link to="/rooms" className={style.reserve}>
-            Reserve
+          {t('reserve', language)}
           </Link>
         </div>
       </div>
@@ -68,10 +71,9 @@ function RoomCard(): JSX.Element {
         <div>
           <img className={style.image} src={image2} alt="log" />
         </div>
-        <h2 className={style.tytle_room}>Suite with 2 beds</h2>
+        <h2 className={style.tytle_room}>{t('suite2beds', language)}</h2>
         <p className={style.text}>
-          The spacious rooms feature a living room and a bathroom. There is a
-          comfortable working area. An extra bed can be installed on request.
+        {t('suite2bedsText', language)}
         </p>
         <div className={style.container_with_icons}>
           <div className={style.icon_text}>
@@ -79,7 +81,7 @@ function RoomCard(): JSX.Element {
               <img src={room} className={style.svg} alt="room" />
             </div>
             <div>
-              <span>1 room</span>
+              <span>{t('1room', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -87,7 +89,7 @@ function RoomCard(): JSX.Element {
               <img src={men} className={style.svg} alt="person" />
             </div>
             <div>
-              <span>2 place</span>
+              <span>{t('2places', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -103,13 +105,13 @@ function RoomCard(): JSX.Element {
               <img src={bed} className={style.svg} alt="bed" />
             </div>
             <div>
-              <span>2 beds</span>
+              <span>{t('2beds', language)}</span>
             </div>
           </div>
         </div>
         <div className={style.button_reserve}>
         <Link to="/rooms" className={style.reserve}>
-            Reserve
+        {t('reserve', language)}
         </Link>
         </div>
       </div>
@@ -117,10 +119,9 @@ function RoomCard(): JSX.Element {
         <div>
           <img className={style.image} src={image3} alt="log" />
         </div>
-        <h2 className={style.tytle_room}>Suit</h2>
+        <h2 className={style.tytle_room}>{t('suite', language)}</h2>
         <p className={style.text}>
-          A room with panoramic views from the bedroom and bathroom to the city
-          center, ideal for a romantic getaway.
+        {t('suiteText', language)}
         </p>
         <div className={style.container_with_icons}>
           <div className={style.icon_text}>
@@ -128,7 +129,7 @@ function RoomCard(): JSX.Element {
               <img src={room} className={style.svg} alt="room" />
             </div>
             <div>
-              <span>1 room</span>
+              <span>{t('1room', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -136,7 +137,7 @@ function RoomCard(): JSX.Element {
               <img src={men} className={style.svg} alt="person" />
             </div>
             <div>
-              <span>2 places</span>
+              <span>{t('2places', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -152,13 +153,13 @@ function RoomCard(): JSX.Element {
               <img src={bed} className={style.svg} alt="bed" />
             </div>
             <div>
-              <span>1 bed</span>
+              <span>{t('1bed', language)}</span>
             </div>
           </div>
         </div>
         <div className={style.button_reserve}>
         <Link to="/rooms" className={style.reserve}>
-            Reserve
+        {t('reserve', language)}
         </Link>
         </div>
       </div>
@@ -166,12 +167,9 @@ function RoomCard(): JSX.Element {
         <div>
           <img className={style.image} src={halflux} alt="log" />
         </div>
-        <h2 className={style.tytle_room}>Duplex</h2>
+        <h2 className={style.tytle_room}>{t('duplex', language)}</h2>
         <p className={style.text}>
-          The room has a combined bedroom and a living area, a dining space and
-          a full kitchen with the necessary household appliances and dishes (on
-          request). An additional sleeping place is represented by a folding
-          sofa.
+        {t('duplexText', language)}
         </p>
         <div className={style.container_with_icons}>
           <div className={style.icon_text}>
@@ -179,7 +177,7 @@ function RoomCard(): JSX.Element {
               <img src={room} className={style.svg} alt="room" />
             </div>
             <div>
-              <span>2 rooms</span>
+              <span>{t('2rooms', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -187,7 +185,7 @@ function RoomCard(): JSX.Element {
               <img src={men} className={style.svg} alt="person" />
             </div>
             <div>
-              <span>4 places</span>
+              <span>{t('4places', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -203,13 +201,13 @@ function RoomCard(): JSX.Element {
               <img src={bed} className={style.svg} alt="bed" />
             </div>
             <div>
-              <span>1 bed and 1 sofa</span>
+              <span>{t('1bed1sofa', language)}</span>
             </div>
           </div>
         </div>
         <div className={style.button_reserve}>
         <Link to="/rooms" className={style.reserve}>
-            Reserve
+        {t('reserve', language)}
         </Link>
         </div>
       </div>
@@ -217,13 +215,9 @@ function RoomCard(): JSX.Element {
         <div>
           <img className={style.image} src={threeBeds} alt="log" />
         </div>
-        <h2 className={style.tytle_room}>Standart</h2>
+        <h2 className={style.tytle_room}>{t('standart', language)}</h2>
         <p className={style.text}>
-          The apartments are ideal for families with children or large groups of
-          travelers. The room has 2 separate bedrooms, a living area, a dining
-          space, a fully equipped kitchen with necessary household appliances
-          and dishes (on request), as well as a dressing room. The bathroom is
-          equipped with a shower or a bathtub and a shower.
+        {t('standartText', language)}
         </p>
         <div className={style.container_with_icons}>
           <div className={style.icon_text}>
@@ -231,7 +225,7 @@ function RoomCard(): JSX.Element {
               <img src={room} className={style.svg} alt="room" />
             </div>
             <div>
-              <span>2 rooms</span>
+              <span>{t('2rooms', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -239,7 +233,7 @@ function RoomCard(): JSX.Element {
               <img src={men} className={style.svg} alt="person" />
             </div>
             <div>
-              <span>4 places</span>
+              <span>{t('4places', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -255,13 +249,13 @@ function RoomCard(): JSX.Element {
               <img src={bed} className={style.svg} alt="bed" />
             </div>
             <div>
-              <span>3 beds</span>
+              <span>{t('3beds', language)}</span>
             </div>
           </div>
         </div>
         <div className={style.button_reserve}>
         <Link to="/rooms" className={style.reserve}>
-            Reserve
+        {t('reserve', language)}
         </Link>
         </div>
       </div>
@@ -269,10 +263,9 @@ function RoomCard(): JSX.Element {
         <div>
           <img className={style.image} src={modern} alt="log" />
         </div>
-        <h2 className={style.tytle_room}>Duplex</h2>
+        <h2 className={style.tytle_room}>{t('duplex', language)}</h2>
         <p className={style.text}>
-          The spacious rooms feature a living room and a bathroom. There is a
-          comfortable working area. An extra bed can be installed on request.
+        {t('duplexText2', language)}
         </p>
         <div className={style.container_with_icons}>
           <div className={style.icon_text}>
@@ -280,7 +273,7 @@ function RoomCard(): JSX.Element {
               <img src={room} className={style.svg} alt="room" />
             </div>
             <div>
-              <span>2 rooms</span>
+              <span>{t('2rooms', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -288,7 +281,7 @@ function RoomCard(): JSX.Element {
               <img src={men} className={style.svg} alt="person" />
             </div>
             <div>
-              <span>2 places</span>
+              <span>{t('2places', language)}</span>
             </div>
           </div>
           <div className={style.icon_text}>
@@ -304,13 +297,13 @@ function RoomCard(): JSX.Element {
               <img src={bed} className={style.svg} alt="bed" />
             </div>
             <div>
-              <span>1 bed</span>
+              <span>{t('1bed', language)}</span>
             </div>
           </div>
         </div>
         <div className={style.button_reserve}>
         <Link to="/rooms" className={style.reserve}>
-            Reserve
+        {t('reserve', language)}
         </Link>
         </div>
       </div>

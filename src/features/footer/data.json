@@ -1,0 +1,42 @@
+{
+    "reserve": {
+        "en": "Reserve",
+        "de": "Reservieren",
+        "ru": "Забронировать"
+    },
+    "overview": {
+        "en": "Overview",
+        "de": "Übersicht",
+        "ru": "Обзор"
+    },
+    "rooms": {
+        "en": "Rooms",
+        "de": "Zimmer",
+        "ru": "Номера"
+    },
+    "events": {
+        "en": "Events",
+        "de": "Veranstaltungen",
+        "ru": "События"
+    },
+    "contacts": {
+        "en": "Contacts",
+        "de": "Kontakte",
+        "ru": "Контакты"
+    },
+    "requestCall": {
+        "en": "Request a call",
+        "de": "Rückruf anfordern",
+        "ru": "Запросить звонок"
+    },
+    "socialNetworks": {
+        "en": "Social networks",
+        "de": "Soziale Netzwerke",
+        "ru": "Социальные сети"
+    },
+    "logo": {
+        "en": "/logo-hotel-far-away-home/hotel-far-away-home.png",
+        "de": "/logo-hotel-far-away-home/hotel-far-away-home_de.png",
+        "ru": "/logo-hotel-far-away-home/hotel-far-away-home_ru.png"
+      }
+}

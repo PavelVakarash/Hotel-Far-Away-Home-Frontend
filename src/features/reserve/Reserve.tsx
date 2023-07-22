@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import style from './Reserve.module.css';
+import { LanguageContext } from '../../LanguageContext';
+import t from './translation';
 
 function Reserve(): JSX.Element {
+  const { language } = useContext(LanguageContext);
   return (
     <div className={style.testbox}>
       <div className={style.banner}>
-        <h1 className={style.reserve_text}>HOTEL RESERVATION FORM</h1>
+        <h1 className={style.reserve_text}>{t('reservationForm', language)}</h1>
       </div>
       <form className={style.form_cont}>
         <div className={style.form}>
           <div className={style.top}>
             <div className={style.field}>
-              <label htmlFor="checkindate">Check-in Date</label>
+              <label htmlFor="checkindate">{t('check-inDate', language)}</label>
               <input
                 className={style.input}
                 id="checkindate"
@@ -21,7 +24,7 @@ function Reserve(): JSX.Element {
               />
             </div>
             <div className={style.field}>
-              <label htmlFor="checkindate">Check-out Date</label>
+              <label htmlFor="checkindate">{t('check-outDate', language)}</label>
               <input
                 className={style.input}
                 id="checkoutdate"
@@ -30,7 +33,7 @@ function Reserve(): JSX.Element {
               />
             </div>
             <div className={style.field}>
-              <p>Number of adults</p>
+              <p>{t('numberOfAdults', language)}</p>
               <select className={style.select}>
                 <option>1</option>
                 <option>2</option>
@@ -43,7 +46,7 @@ function Reserve(): JSX.Element {
               </select>
             </div>
             <div className={style.field}>
-              <p>Number of childrens</p>
+              <p>{t('numberOfChildrens', language)}</p>
               <select className={style.select}>
                 <option>1</option>
                 <option>2</option>
@@ -59,7 +62,7 @@ function Reserve(): JSX.Element {
         </div>
         <div className={style.btn_block}>
           <button className={style.button} type="submit">
-            Book
+          {t('book', language)}
           </button>
         </div>
       </form>

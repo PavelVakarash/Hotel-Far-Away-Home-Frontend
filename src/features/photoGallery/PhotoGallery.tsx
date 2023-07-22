@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import style from './PhotoGallery.module.css';
+import { LanguageContext } from '../../LanguageContext';
+import t from './translation';
 
 function PhotoGallery() :JSX.Element {
     const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+
+    const { language } = useContext(LanguageContext);
 
     const photos = [
         '/hotel-gallery/gallery_2.jpg',
@@ -47,7 +51,7 @@ function PhotoGallery() :JSX.Element {
         <div className={style.photoGallery}>
             <div className={style.photoContainer}>
             <div className={style.titleContainer}>
-            <h1 className={style.title}>HOTEL GALLERY</h1>
+            <h1 className={style.title}>{t('gallery', language)}</h1>
             </div>
             <img src={photos[currentPhotoIndex]} alt="" className={style.photo} />
             </div>

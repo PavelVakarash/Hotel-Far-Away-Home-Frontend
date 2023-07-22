@@ -1,0 +1,43 @@
+{
+    "contacts": {
+      "en": "CONTACTS",
+      "de": "KONTAKTE",
+      "ru": "КОНТАКТЫ"
+    },
+    "phone": {
+      "en": "Phone",
+      "de": "Telefon",
+      "ru": "Телефон"
+    },
+    "requestCall": {
+      "en": "Request a call",
+      "de": "Rückruf anfordern",
+      "ru": "Запросить звонок"
+    },
+    "address": {
+      "en": "Hotel address",
+      "de": "Hoteladresse",
+      "ru": "Адрес отеля"
+    },
+    "reservation": {
+      "en": "Reservation department",
+      "de": "Reservierungsabteilung",
+      "ru": "Отдел бронирования"
+    },
+    "sales": {
+      "en": "Sales department",
+      "de": "Vertriebsabteilung",
+      "ru": "Отдел продаж"
+    },
+    "marketing": {
+      "en": "Marketing department",
+      "de": "Marketingabteilung",
+      "ru": "Отдел маркетинга"
+    },
+    "directions": {
+      "en": "GET DIRECTIONS TO HOTEL",
+      "de": "WEGBESCHREIBUNG ZUM HOTEL",
+      "ru": "ПУТЕВОДИТЕЛЬ К ОТЕЛЮ"
+    }
+  }
+  

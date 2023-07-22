@@ -1,23 +1,29 @@
 .navBar {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items:center;
     padding: 2vw;
     position: sticky;
     top: 0;
-    flex-wrap: wrap;
     background: rgb(215, 215, 215);
     background: linear-gradient(90deg, rgba(215, 215, 215, 1) 0%, rgba(161, 161, 172, 1) 58%, rgba(127, 162, 182, 1) 100%);
     z-index: 7;
+}
+
+.navBar_block {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .navBar_text {
     position: relative;
     color: #fff;
     text-decoration: none;
-    font-size: 1.35vw;
+    font-size: 1.3vw;
+    margin-left: 0.5vw;
+    margin-right: 0.9vw;
     cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Courier New', Courier, monospace Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .navBar_text:hover {
@@ -27,7 +33,7 @@
 .logo {
     width: 10vw;
     height: 8vw;
-    margin: -2vw;
+    margin: -2vw 0 -2vw -2vw;
     cursor: pointer;
 }
 
@@ -51,3 +57,4 @@
     width: 1.4vw;
     height: 1.4vw;
 }
+  

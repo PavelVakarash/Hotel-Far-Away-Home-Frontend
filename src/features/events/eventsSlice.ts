@@ -6,6 +6,7 @@ import EventCredentials from './types/EventCredentials';
 const initialState: EventsState = {
     events: [],
     error: undefined,
+    currentEvent: undefined,
 };
 // eslint-disable-next-line import/prefer-default-export
 export const loadEvents = createAsyncThunk('events/loadEvents', () =>
@@ -13,6 +14,9 @@ export const loadEvents = createAsyncThunk('events/loadEvents', () =>
 );
 export const deleteEvent = createAsyncThunk('events/deleteEvent', (id: number) =>
     api.deleteEvent(id)
+);
+export const getEvent = createAsyncThunk('events/getEvent', (id: number) =>
+    api.getEvent(id)
 );
 export const createEvent = createAsyncThunk('events/createEvent', (credentials: EventCredentials) =>
     api.createEvent(credentials)
@@ -44,6 +48,12 @@ const eventsSlice = createSlice({
             })
             .addCase(createEvent.fulfilled, (state, action) => {
                 state.events.push(action.payload);
+            })
+            .addCase(getEvent.rejected, (state, action) => {
+                state.error = action.error.message;
+            })
+            .addCase(getEvent.fulfilled, (state, action) => {
+                state.currentEvent = action.payload;
             });
     },
 });

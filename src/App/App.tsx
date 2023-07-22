@@ -20,6 +20,7 @@ import Layout from '../features/layout/Layout';
 import RoomPage from '../features/rooms/RoomPage';
 import Events from '../features/events/Events';
 import MyReserve from '../features/reserve/MyReserve';
+import { LanguageProvider } from '../LanguageContext';
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -38,6 +39,7 @@ function App(): JSX.Element {
     );
   }
   return (
+    <LanguageProvider>
     <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -58,6 +60,7 @@ function App(): JSX.Element {
         </Route>
       </Routes>
     </HashRouter>
+    </LanguageProvider>
   );
 }
 export default App;

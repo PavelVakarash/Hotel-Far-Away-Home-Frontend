@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getUser, login, resetLoginFormError } from './authSlice';
 import { selectLoginFormError } from './selectors';
 import { useAppDispatch } from '../../store';
+import { LanguageContext } from '../../LanguageContext';
+import t from './translation';
 
 function Login(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -11,6 +13,8 @@ function Login(): JSX.Element {
   const error = useSelector(selectLoginFormError);
   const [email, setName] = React.useState('');
   const [password, setPassword] = React.useState('');
+
+  const { language } = useContext(LanguageContext);
 
   const handleSubmit = React.useCallback(
     async (event: React.FormEvent) => {
@@ -58,7 +62,7 @@ function Login(): JSX.Element {
 
   return (
     <form className="auth-form" onSubmit={handleSubmit}>
-      <h2>Вход</h2>
+      <h2>{t('login', language)}</h2>
       {error && (
         <div className="invalid-feedback mb-3" style={{ display: 'block' }}>
           {error}
@@ -66,7 +70,7 @@ function Login(): JSX.Element {
       )}
       <div className="mb-3">
         <label htmlFor="name-input" className="form-label">
-          Имя
+        {t('username', language)}
         </label>
         <input
           type="text"
@@ -79,7 +83,7 @@ function Login(): JSX.Element {
       </div>
       <div className="mb-3">
         <label htmlFor="password-input" className="form-label">
-          Пароль
+        {t('password', language)}
         </label>
         <input
           type="password"
@@ -91,7 +95,7 @@ function Login(): JSX.Element {
         />
       </div>
       <button type="submit" className="btn btn-primary">
-        Войти
+      {t('signIn', language)}
       </button>
     </form>
   );

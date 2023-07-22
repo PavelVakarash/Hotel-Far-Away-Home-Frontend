@@ -13,6 +13,10 @@ export async function deleteEvent(id: number): Promise<Event> {
     });
     return res.json();
 }
+export async function getEvent(id: number): Promise<Event> {
+    const res = await fetch(`/api/event/${id}`);
+    return res.json();
+}
 
 export async function createEvent(credentials: EventCredentials): Promise<Event> {
     const res = await fetch('/api/events', {

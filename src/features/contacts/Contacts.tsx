@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import style from './Contacts.module.css';
+import { LanguageContext } from '../../LanguageContext';
+import t from './translation';
 
 function Contacts(): JSX.Element {
     const navigate = useNavigate();
@@ -17,32 +19,34 @@ function Contacts(): JSX.Element {
         window.location.href = 'https://goo.gl/maps/jYT8sKCbiSuxJnFRA';
     }
 
+    const { language } = useContext(LanguageContext);
+
     return (
         <div className={style.contactsContainer}>
             <h1 className={style.contacts_text}>
-                CONTACTS
+            {t('contacts', language)}
             </h1>
             <div className={style.contactContainer}>
                 <div className={style.contacts}>
                     <div className={style.contactsContent}>
-                        <span className={style.contactsInfo}>Phone</span>
+                        <span className={style.contactsInfo}>{t('phone', language)}</span>
                         <span className={style.contactsTitle} onClick={handlePhoneClick}>
                             +0 123 456 78 90
                         </span>
                         <span className={style.requestCall} onClick={handleRequestCallClick}>
-                            Request a call
+                        {t('requestCall', language)}
                         </span>
-                        <span className={style.contactsInfo}>Hotel address</span>
+                        <span className={style.contactsInfo}>{t('address', language)}</span>
                         <span className={style.contactsTitle}>
                             Platz d. Deutschen Einheit 2, 20457 Hamburg
                         </span>
-                        <span className={style.contactsInfo}>Reservation Department</span>
+                        <span className={style.contactsInfo}>{t('reservation', language)}</span>
                         <span className={style.contactsTitle}>reservations@farawayhome.de</span>
-                        <span className={style.contactsInfo}>Sales department</span>
+                        <span className={style.contactsInfo}>{t('sales', language)}</span>
                         <span className={style.contactsTitle}>sales@farawayhome.de</span>
-                        <span className={style.contactsInfo}>Marketing department</span>
+                        <span className={style.contactsInfo}>{t('marketing', language)}</span>
                         <span className={style.contactsTitle}>marketing@farawayhome.de</span>
-                        <button className={style.contact_button} type="button" onClick={handleGetDirectionClick}>GET DIRECTIONS TO HOTEL</button>
+                        <button className={style.contact_button} type="button" onClick={handleGetDirectionClick}>{t('directions', language)}</button>
                     </div>
                 </div>
                 <div className={style.contacts}>

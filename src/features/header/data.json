@@ -1,0 +1,28 @@
+{
+    "accommodations": {
+        "en": "Luxury Accommodations at Far Away Home: Your Home Away from Home",
+        "de": "Luxuriöse Unterkünfte im Fernab Von ZuHause: Ihr Zuhause fernab von Zuhause",
+        "ru": "Роскошное размещение в Отеле Вдали От Дома: Ваш Дом вдали от дома"
+    },
+    "check-in": {
+        "en": "Check-in",
+        "de": "Anreise",
+        "ru": "Дата заезда"
+    },
+    "check-out": {
+        "en": "Check-out",
+        "de": "Abreise",
+        "ru": "Дата выезда"
+    },
+    "guests": {
+        "en": "Guests",
+        "de": "Gäste",
+        "ru": "Гости"
+    },
+    "reserveRoom": {
+        "en": "Reserve Room",
+        "de": "Zimmer reservieren",
+        "ru": "Забронировать номер"
+    }
+}
+

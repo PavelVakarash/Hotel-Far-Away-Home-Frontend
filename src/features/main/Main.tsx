@@ -1,19 +1,19 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import OverviewCopy from '../Overview/OverviewCopy';
-import ContactsCopy from '../contacts/ContactsCopy';
+import Overview from '../Overview/Overview';
+import Contacts from '../contacts/Contacts';
 import PhotoGallery from '../photoGallery/PhotoGallery';
-import VideoGallery from '../../videoGallery/VideoGallery';
+import VideoGallery from '../videoGallery/VideoGallery';
 import Header from '../header/Header';
 
 function Main(): JSX.Element {
   return (
     <>
       <Header />
-      <OverviewCopy />
+      <Overview />
       <VideoGallery />
       <PhotoGallery />
-      <ContactsCopy />
+      <Contacts />
       {/* <h1 className="mb-1">Список дел Алишера</h1> */}
       <Outlet />
       {/* <NavBar /> */}

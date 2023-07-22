@@ -1,6 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
+import { useDispatch } from 'react-redux';
 import EmojiPicker, { EmojiClickData } from 'emoji-picker-react';
 import style from './EventsForm.module.css';
+import { LanguageContext } from '../../../LanguageContext';
+import t from '../translation';
 
 interface EventsFormProps {
   onClose: () => void;
@@ -12,6 +15,7 @@ function EventsForm({ onClose }: EventsFormProps): JSX.Element {
   const [selectedFile, setSelectedFile] = useState<File | undefined>(undefined);
 
   const formRef = useRef<HTMLDivElement>(null);
+  const dispatch = useDispatch();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     setEventText(e.target.value);
@@ -38,14 +42,17 @@ function EventsForm({ onClose }: EventsFormProps): JSX.Element {
     setSelectedFile(undefined);
   }
 
-  function handleSubmit(): void { // для отправки данных
+  function handleSubmit(): void {
     if (selectedFile) {
-      const formData = new FormData();
-      formData.append('text', eventText);
-      formData.append('created_at', new Date().toISOString());
-      formData.append('author', (document.getElementById('authorName') as HTMLInputElement).value);
-      formData.append('title', (document.getElementById('title') as HTMLInputElement).value);
-      formData.append('file', selectedFile);
+      const credentials = {
+        text: eventText,
+        created_at: new Date(),
+        author: (document.getElementById('authorName') as HTMLInputElement).value,
+        title: (document.getElementById('title') as HTMLInputElement).value,
+        file: selectedFile,
+      };
+
+      dispatch({ type: 'CREATE_EVENT', payload: credentials });
 
       setEventText('');
       setSelectedFile(undefined);
@@ -60,17 +67,19 @@ function EventsForm({ onClose }: EventsFormProps): JSX.Element {
     setShowEmojiPicker(!showEmojiPicker);
   };
 
+  const { language } = useContext(LanguageContext);
+
   return (
     <div id="eventsForm" className={style.eventsFormContainer} ref={formRef}>
       <div className={style.inputRow}>
         <label htmlFor="authorName" className={style.labelName}>
-          Name
+        {t('Name', language)}
         </label>
         <input type="text" id="authorName" className={style.inputField} />
       </div>
       <div className={style.inputRow}>
         <label htmlFor="title" className={style.labelTitle}>
-          Title
+        {t('Title', language)}
         </label>
         <input type="text" id="title" className={style.inputField} />
       </div>
@@ -86,7 +95,7 @@ function EventsForm({ onClose }: EventsFormProps): JSX.Element {
 
       <div className={style.buttonContainer}>
         <button type="button" onClick={onClose} className={style.closeButton}>
-          CLOSE
+        {t('Close', language)}
         </button>
 
         <button type="button" onClick={toggleEmojiPicker} className={style.emojiButton}>
@@ -102,7 +111,7 @@ function EventsForm({ onClose }: EventsFormProps): JSX.Element {
         />
 
         <button type="button" onClick={handleSubmit} className={style.submitButton}>
-          SUBMIT
+        {t('Submit', language)}
         </button>
 
       </div>

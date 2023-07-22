@@ -1,0 +1,37 @@
+{
+    "services": {
+        "en": "HOTEL SERVICES",
+        "de": "HOTELLEISTUNGEN",
+        "ru": "УСЛУГИ ОТЕЛЯ"
+    },
+    "petFriendly": {
+        "en": "Pet friendly",
+        "de": "Haustiere erlaubt",
+        "ru": "Разрешено с питомцами"
+    },
+    "roomService": {
+        "en": "Room service",
+        "de": "Zimmerservice",
+        "ru": "Обслуживание в номере"
+    },
+    "parking": {
+        "en": "Parking",
+        "de": "Parkplatz",
+        "ru": "Парковка"
+    },
+    "electroStation": {
+        "en": "Electro-vehicle charging station",
+        "de": "Elektrofahrzeug-Ladestation",
+        "ru": "Зарядная станция для электромобил"
+    },
+    "laundry": {
+        "en": "Laundry",
+        "de": "Wäscheservice",
+        "ru": "Прачечная"
+    },
+    "servicesForChildren": {
+        "en": "Services for children",
+        "de": "Dienstleistungen für Kinder",
+        "ru": "Услуги для детей"
+    }
+}

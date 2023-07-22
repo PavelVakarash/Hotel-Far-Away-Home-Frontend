@@ -1,0 +1,107 @@
+{
+    "ourRoomsServices": {
+      "en": "OUR ROOMS AND SERVICES",
+      "de": "UNSERE ZIMMER UND DIENSTLEISTUNGEN",
+      "ru": "НАШИ НОМЕРА И УСЛУГИ"
+    },
+    "standart1bed": {
+      "en": "Standart with 1 bed",
+      "de": "Standard mit 1 Bett",
+      "ru": "Стандарт с 1 кроватью"
+    },
+    "standart1bedText": {
+      "en": "The spacious rooms feature a living room and a bathroom. There is a comfortable working area. An extra bed can be installed on request.",
+      "de": "Die geräumigen Zimmer verfügen über ein Wohnzimmer und ein Badezimmer. Es gibt einen komfortablen Arbeitsbereich. Auf Anfrage kann ein Zustellbett installiert werden.",
+      "ru": "Просторные номера оснащены гостиной и ванной комнатой. Также имеется удобное рабочее место. Дополнительная кровать может быть установлена по запросу."
+    },
+    "1room": {
+      "en": "1 room",
+      "de": "1 Zimmer",
+      "ru": "1 комната"
+    },
+    "2places": {
+      "en": "2 places",
+      "de": "2 Plätze",
+      "ru": "2 места"
+    },
+    "1bed": {
+      "en": "1 bed",
+      "de": "1 Bett",
+      "ru": "1 кровать"
+    },
+    "reserve": {
+      "en": "Reserve",
+      "de": "Reservieren",
+      "ru": "Забронировать"
+    },
+    "suite2beds": {
+      "en": "Suite with 2 beds",
+      "de": "Suite mit 2 Betten",
+      "ru": "Люкс с 2 кроватями"
+    },
+    "suite2bedsText": {
+      "en": "The spacious rooms feature a living room and a bathroom. There is a comfortable working area. An extra bed can be installed on request.",
+      "de": "Die geräumigen Zimmer verfügen über ein Wohnzimmer und ein Badezimmer. Es gibt einen komfortablen Arbeitsbereich. Auf Anfrage kann ein Zustellbett installiert werden.",
+      "ru": "Просторные номера оснащены гостиной и ванной комнатой. Также имеется удобное рабочее место. Дополнительная кровать может быть установлена по запросу."
+    },
+    "2beds": {
+      "en": "2 beds",
+      "de": "2 Betten",
+      "ru": "2 кровати"
+    },
+    "suite": {
+      "en": "Suite",
+      "de": "Suite",
+      "ru": "Люкс"
+    },
+    "suiteText": {
+      "en": "A room with panoramic views from the bedroom and bathroom to the city center, ideal for a romantic getaway.",
+      "de": "Ein Zimmer mit Panoramablick vom Schlafzimmer und Badezimmer auf das Stadtzentrum, ideal für einen romantischen Kurzurlaub.",
+      "ru": "Комната с панорамным видом из спальни и ванной комнаты на центр города, идеально подходит для романтического отдыха."
+    },
+    "duplex": {
+      "en": "Duplex",
+      "de": "Duplex",
+      "ru": "Дуплекс"
+    },
+    "duplexText": {
+      "en": "The room has a combined bedroom and a living area, a dining space and a full kitchen with the necessary household appliances and dishes (on request). An additional sleeping place is represented by a folding sofa.",
+      "de": "Das Zimmer verfügt über einen kombinierten Schlafbereich und einen Wohnbereich, einen Essbereich und eine voll ausgestattete Küche mit den notwendigen Haushaltsgeräten und Geschirr (auf Anfrage). Ein zusätzlicher Schlafplatz wird durch ein Klappsofa dargestellt.",
+      "ru": "В номере есть объединенная спальня и гостиная, обеденная зона и полностью оборудованная кухня с необходимой бытовой техникой и посудой (по запросу). Дополнительное спальное место представлено раскладным диваном."
+    },
+    "2rooms": {
+      "en": "2 rooms",
+      "de": "2 Zimmer",
+      "ru": "2 комнаты"
+    },
+    "4places": {
+      "en": "4 places",
+      "de": "4 Plätze",
+      "ru": "4 места"
+    },
+    "1bed1sofa": {
+      "en": "1 bed and 1 sofa",
+      "de": "1 Bett und 1 Sofa",
+      "ru": "1 кровать и 1 диван"
+    },
+    "standart": {
+      "en": "Standart",
+      "de": "Standard",
+      "ru": "Стандарт"
+    },
+    "standartText": {
+      "en": "The apartments are ideal for families with children or large groups of travelers. The room has 2 separate bedrooms, a living area, a dining space, a fully equipped kitchen with necessary household appliances and dishes (on request), as well as a dressing room. The bathroom is equipped with a shower or a bathtub and a shower.",
+      "de": "Die Apartments eignen sich ideal für Familien mit Kindern oder große Reisegruppen. Das Zimmer verfügt über 2 separate Schlafzimmer, einen Wohnbereich, einen Essbereich, eine voll ausgestattete Küche mit notwendigen Haushaltsgeräten und Geschirr (auf Anfrage) sowie eine Ankleide. Das Badezimmer ist mit einer Dusche oder einer Badewanne und einer Dusche ausgestattet.",
+      "ru": "Апартаменты идеально подходят для семей с детьми или больших групп путешественников. В номере есть 2 отдельные спальни, гостиная, обеденная зона, полностью оборудованная кухня с необходимой бытовой техникой и посудой (по запросу), а также гардеробная. Ванная комната оснащена душем или ванной и душем."
+    },
+    "3beds": {
+      "en": "3 beds",
+      "de": "3 Betten",
+      "ru": "3 кровати"
+    },
+    "duplexText2": {
+      "en": "The spacious rooms feature a living room and a bathroom. There is a comfortable working area. An extra bed can be installed on request.",
+      "de": "Die geräumigen Zimmer verfügen über ein Wohnzimmer und ein Badezimmer. Es gibt einen komfortablen Arbeitsbereich. Auf Anfrage kann ein Zustellbett installiert werden.",
+      "ru": "Просторные номера оснащены гостиной и ванной комнатой. Также имеется удобное рабочее место. Дополнительная кровать может быть установлена по запросу."
+    }
+  }  

@@ -1,0 +1,32 @@
+{
+  "addEvent": {
+    "en": "ADD YOUR EVENT",
+    "de": "EIGENES EREIGNIS HINZUFÜGEN",
+    "ru": "ДОБАВИТЬ СОБЫТИЕ"
+  },
+  "Name": {
+    "en": "Name",
+    "de": "Name",
+    "ru": "Имя"
+  },
+  "Title": {
+    "en": "Title",
+    "de": "Titel",
+    "ru": "Заголовок"
+  },
+  "Close": {
+    "en": "CLOSE",
+    "de": "SCHLIESSEN",
+    "ru": "ЗАКРЫТЬ"
+  },
+  "Submit": {
+    "en": "SUBMIT",
+    "de": "SENDEN",
+    "ru": "ОТПРАВИТЬ"
+  },
+  "Events": {
+    "en": "No events available",
+    "de": "keine Ereignisse verfügbar",
+    "ru": "Нет доступных событий"
+  }
+}

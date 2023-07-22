@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import style from './Footer.module.css';
+import { LanguageContext } from '../../LanguageContext';
+import t from './translation';
 
 function Footer(): JSX.Element {
     const navigate = useNavigate();
+
+    const { language, changeLanguage } = useContext(LanguageContext);
+    const logoPath = t('logo', language);
+
     function handleLogoClick(): void {
         navigate('/');
         window.scrollTo({
@@ -29,15 +35,6 @@ function Footer(): JSX.Element {
     function handleRequestCallClick(): void {
         navigate('/requestCall');
     }
-    function handleRuClick(): void {
-        navigate('/ru');
-    }
-    function handleDeClick(): void {
-        navigate('/de');
-    }
-    function handleEnClick(): void {
-        navigate('/en');
-    }
 
     const handleScrollToTop = (): void => {
         window.scrollTo({
@@ -46,21 +43,25 @@ function Footer(): JSX.Element {
         });
     };
 
+    const handleLanguageChange = (lang: string): void => {
+        changeLanguage(lang);
+      };
+
     return (
         <div className={style.footer}>
             <div className={style.logoContainer} onClick={handleLogoClick}>
-                <img src="/logo-hotel-far-away-home/hotel-far-away-home.png" alt="Logo" className={style.logo} />
+                <img src={logoPath} alt="Logo" className={style.logo} />
             </div>
             <div className={style.footer_menu}>
                 <div className={style.menu}>
                     <div className={style.mainMenu}>
-                        <span className={style.footer_text} onClick={handleReserveClick}>Reserve
+                        <span className={style.footer_text} onClick={handleReserveClick}>{t('reserve', language)}
                         </span>
-                        <span className={style.footer_text} onClick={handleOverviewClick}>Overview
+                        <span className={style.footer_text} onClick={handleOverviewClick}>{t('overview', language)}
                         </span>
-                        <span className={style.footer_text} onClick={handleEventsClick}>Events
+                        <span className={style.footer_text} onClick={handleEventsClick}>{t('events', language)}
                         </span>
-                        <span className={style.footer_text} onClick={handleContactsClick}>Contacts
+                        <span className={style.footer_text} onClick={handleContactsClick}>{t('contacts', language)}
                         </span>
                     </div>
                     <div className={style.callMenu}>
@@ -68,7 +69,7 @@ function Footer(): JSX.Element {
                             +0 123 456 78 90
                         </span>
                         <span className={style.footer_text} onClick={handleRequestCallClick}>
-                            Request a Call
+                        {t('requestCall', language)}
                         </span>
                     </div>
                 </div>
@@ -77,22 +78,22 @@ function Footer(): JSX.Element {
                     <span className={style.info_text}>
                         © Far Away Home Hotel 2023
                     </span>
-                    <span className={style.footer_text} onClick={handleDeClick}>
+                    <span className={style.footer_text} onClick={() => handleLanguageChange('de')}>
                         <img src="/icons-hotel-far-away-home/germany.png" alt="DE" className={style.icon} />
                         DE
                     </span>
-                    <span className={style.footer_text} onClick={handleRuClick}>
+                    <span className={style.footer_text} onClick={() => handleLanguageChange('ru')}>
                         <img src="/icons-hotel-far-away-home/russia.png" alt="RU" className={style.icon} />
                         RU
                     </span>
-                    <span className={style.footer_text} onClick={handleEnClick}>
+                    <span className={style.footer_text} onClick={() => handleLanguageChange('en')}>
                         <img src="/icons-hotel-far-away-home/united-kingdom.png" alt="EN" className={style.icon} />
                         EN
                     </span>
                 </div>
                     <div className={style.socialInfo}>
                     <span className={style.info_text}>
-                        Social networks
+                    {t('socialNetworks', language)}
                     </span>
                     <img src="/icons-hotel-far-away-home/telegram.png" alt="EN" className={style.socialIcon} />
                     <img src="/icons-hotel-far-away-home/youtube.png" alt="EN" className={style.socialIcon} />

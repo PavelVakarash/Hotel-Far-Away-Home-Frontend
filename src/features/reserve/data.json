@@ -1,0 +1,37 @@
+{
+    "myBookings": {
+        "en": "My bookings",
+        "de": "Meine Buchungen",
+        "ru": "Мои бронирования"
+    },
+    "reservationForm": {
+        "en": "HOTEL RESERVATION FORM",
+        "de": "HOTEL RESERVIERUNGSFORMULAR",
+        "ru": "ФОРМА БРОНИРОВАНИЯ ОТЕЛЯ"
+    },
+    "check-inDate": {
+        "en": "Check-in Date",
+        "de": "Anreisedatum",
+        "ru": "Дата заезда"
+    },
+    "check-outDate": {
+        "en": "Check-out Date",
+        "de": "Abreisedatum",
+        "ru": "Дата выезда"
+    },
+    "numberOfAdults": {
+        "en": "Number of adults",
+        "de": "Anzahl Erwachsener",
+        "ru": "Количество взрослых"
+    },
+    "numberOfChildrens": {
+        "en": "Number of childrens",
+        "de": "Anzahl Kinder",
+        "ru": "Количество детей"
+    },
+    "book": {
+        "en": "Book",
+        "de": "Buchen",
+        "ru": "Забронировать"
+    }
+}

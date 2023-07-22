@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { register, resetRegisterFormError, login } from './authSlice';
 import { selectRegisterFormError } from './selectors';
 import { useAppDispatch } from '../../store';
+import { LanguageContext } from '../../LanguageContext';
+import t from './translation';
 
 function Register(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -12,6 +14,8 @@ function Register(): JSX.Element {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [passwordRepeat, setPasswordRepeat] = React.useState('');
+
+  const { language } = useContext(LanguageContext);
 
   const handleSubmit = React.useCallback(
     async (event: React.FormEvent) => {
@@ -59,7 +63,7 @@ function Register(): JSX.Element {
 
   return (
     <form className="auth-form" onSubmit={handleSubmit}>
-      <h2>Регистрация</h2>
+      <h2>{t('registration', language)}</h2>
       {error && (
         <div className="invalid-feedback mb-3" style={{ display: 'block' }}>
           {error}
@@ -67,7 +71,7 @@ function Register(): JSX.Element {
       )}
       <div className="mb-3">
         <label htmlFor="name-input" className="form-label">
-          Имя
+        {t('username', language)}
         </label>
         <input
           type="text"
@@ -80,7 +84,7 @@ function Register(): JSX.Element {
       </div>
       <div className="mb-3">
         <label htmlFor="password-input" className="form-label">
-          Пароль
+        {t('password', language)}
         </label>
         <input
           type="password"
@@ -93,7 +97,7 @@ function Register(): JSX.Element {
       </div>
       <div className="mb-3">
         <label htmlFor="password-repeat-input" className="form-label">
-          Повторите пароль
+        {t('confirmPassword', language)}
         </label>
         <input
           type="password"
@@ -105,7 +109,7 @@ function Register(): JSX.Element {
         />
       </div>
       <button type="submit" className="btn btn-primary">
-        Зарегистрироваться
+      {t('signUp', language)}
       </button>
     </form>
   );

@@ -1,0 +1,37 @@
+{
+    "login": {
+        "en": "Login",
+        "de": "Anmelden",
+        "ru": "Вход"
+    },
+    "username": {
+        "en": "Username",
+        "de": "Benutzername",
+        "ru": "Имя"
+    },
+    "password": {
+        "en": "Password",
+        "de": "Passwort",
+        "ru": "Пароль"
+    },
+    "signIn": {
+        "en": "Sign In",
+        "de": "Anmelden",
+        "ru": "Войти"
+    },
+    "registration": {
+        "en": "Registration",
+        "de": "Registrierung",
+        "ru": "Регистрация"
+    },
+    "confirmPassword": {
+        "en": "Confirm Password",
+        "de": "Passwort bestätigen",
+        "ru": "Повторите пароль"
+    },
+    "signUp": {
+        "en": "Sign Up",
+        "de": "Registrieren",
+        "ru": "Зарегистрироваться"
+    }
+}
