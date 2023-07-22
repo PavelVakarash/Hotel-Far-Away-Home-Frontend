@@ -21,12 +21,12 @@ export default function Rooms(): JSX.Element {
     <div className={style.rooms_cont}>
       {rooms &&
         rooms.map((el) => (
-          <div className={style.room_card} key={el.id}>
+          <div className={style.room_card} key={el.id}>№
             {el.number}
             <p>{el.typeOfRoom}</p>
             <p>{el.price}</p>
             {user && user.role === 'ADMIN' && (
-              <button type="button" onClick={() => dispatch(deleteRoom(el.id))}>
+              <button className={style.delete} type="button" onClick={() => dispatch(deleteRoom(el.id))}>
                 Delete room
               </button>
             )}

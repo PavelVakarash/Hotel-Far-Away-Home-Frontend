@@ -1,0 +1,21 @@
+.my_book{
+    font-size: 24px;
+    padding: 25px;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(242, 242, 242);
+    padding: 55px;
+}
+.card_cont{
+display: flex;
+gap:30px;
+flex-direction: column;
+
+}
+.card{
+    border: 1px solid black;
+    width: 180px;
+}

@@ -1,0 +1,23 @@
+.create_cont{
+    padding: 45px;
+    display: flex;
+    gap:40px;
+    flex-wrap: wrap;
+   margin: 20px auto;
+justify-content: center;
+background-color: rgb(242, 242, 242); 
+}
+.select,
+.input,
+.submit
+{
+    width: 150px;
+    height: 80px;
+    font-size: 24px;
+}
+.submit{
+    border-radius: 15%;
+}
+.submit:hover{
+    color:red;
+}

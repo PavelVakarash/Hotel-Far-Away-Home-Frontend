@@ -6,6 +6,7 @@ import { createBooking } from '../bookings/bookingsSlice';
 import { getRoom } from './roomsSlice';
 import { selectRoom } from './selectors';
 import { selectUser } from '../auth/selectors';
+import style from './RoomPage.module.css';
 
 export default function RoomPage(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -36,32 +37,32 @@ export default function RoomPage(): JSX.Element {
     );
   }
   return (
-    <>
-      <div>RoomPage</div>
-      <div>
-        <span>{room?.number.toString()}</span>
+    <div className={style.page_cont}>
+      <span className={style.check}>Please check your booking: </span>
+        <span>№{room?.number.toString()}</span>
         <span>{room?.price.toString()}</span>
         <span>{room?.typeOfRoom}</span>
         <span>{room?.id}</span>
-        <button type="button" onClick={() => setFlag(!flag)}>
+        <button className={style.book} type="button" onClick={() => setFlag(!flag)}>
           Book
         </button>
         {flag && (
-          <form onSubmit={handleSubmit}>
+          <form className={style.form} onSubmit={handleSubmit}>
             <input
+              className={style.input}
               type="date"
               placeholder="check in"
               onChange={(event) => setCheck_in(new Date(event.target.value))}
             />
             <input
+              className={style.input}
               type="date"
               placeholder="check out"
               onChange={(event) => setCheck_out(new Date(event.target.value))}
             />
-            <button type="submit">Отправить</button>
+            <button className={style.book} type="submit">Отправить</button>
           </form>
         )}
-      </div>
-    </>
+    </div>
   );
 }

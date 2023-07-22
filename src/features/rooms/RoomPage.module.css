@@ -1,0 +1,29 @@
+.page_cont{
+    display: flex;
+    gap:20px;
+    padding: 40px;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.book{
+    width: 150px;
+    height: 80px;
+    font-size: 22px;
+    border-radius: 15%;
+}
+.book:hover{
+    color:red;
+}
+.check{
+    font-size: 18px;
+}
+.form{
+    display: flex;
+    gap:20px;
+    align-items: baseline;
+}
+.input{
+    width: 150px;
+    height: 50px;
+}
