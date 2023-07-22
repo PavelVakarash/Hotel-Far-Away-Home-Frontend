@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export default interface IBooking {
     checkIn: ReactNode;
     id: number,
