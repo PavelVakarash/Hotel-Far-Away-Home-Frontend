@@ -1,4 +1,5 @@
 export default interface IBooking {
+    checkIn: ReactNode;
     id: number,
     cheCkIn: string,
     checkOut: string,
