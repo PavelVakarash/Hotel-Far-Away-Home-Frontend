@@ -2,11 +2,15 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import RoomsState from './types/RoomsState';
 import * as api from './api';
 import RoomCredentials from './types/RoomCredentials';
+import RoomAvailableCred from './types/RoomAvailableCred';
 
 const initialState: RoomsState = {
     rooms: [],
     error: undefined,
     currentRoom: undefined,
+    availableRooms: [],
+    cheCkIn: '',
+    checkOut: '',
 };
 // eslint-disable-next-line import/prefer-default-export
 export const loadRooms = createAsyncThunk('rooms/loadRooms', () =>
@@ -18,6 +22,9 @@ export const deleteRoom = createAsyncThunk('rooms/deleteRoom', (id: number) =>
 export const getRoom = createAsyncThunk('rooms/getRoom', (id: number) =>
     api.getRoom(id)
 );
+export const getAvailableRooms = createAsyncThunk('rooms/getAvailableRooms',
+({ cheCkIn, checkOut }:RoomAvailableCred) => api.getAvailableRooms(cheCkIn, checkOut));
+
 export const createRoom = createAsyncThunk('rooms/createRoom', (credentials: RoomCredentials) =>
     api.createRoom(credentials)
 );
@@ -36,6 +43,12 @@ const roomsSlice = createSlice({
             })
             .addCase(loadRooms.fulfilled, (state, action) => {
                 state.rooms = action.payload.data;
+            })
+            .addCase(getAvailableRooms.rejected, (state, action) => {
+                state.error = action.error.message;
+            })
+            .addCase(getAvailableRooms.fulfilled, (state, action) => {
+                state.availableRooms = action.payload.data;
             })
             .addCase(deleteRoom.rejected, (state, action) => {
                 state.error = action.error.message;

@@ -60,7 +60,7 @@ export default function RoomPage(): JSX.Element {
               placeholder="check out"
               onChange={(event) => setCheck_out(new Date(event.target.value))}
             />
-            <button className={style.book} type="submit">Отправить</button>
+            <button className={style.book} type="submit">Submit</button>
           </form>
         )}
     </div>

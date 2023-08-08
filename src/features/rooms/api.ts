@@ -1,4 +1,5 @@
 import Room from './types/Room';
+
 import RoomCredentials from './types/RoomCredentials';
 
 // eslint-disable-next-line import/prefer-default-export
@@ -6,7 +7,15 @@ export async function getRooms(): Promise<{ data: Room[] }> {
     const result = await fetch('/api/rooms');
     return result.json();
 }
-
+export async function getAvailableRooms(cheCkIn:string, checkOut:string):Promise<{ data: Room[] }> {
+    const result = await fetch(`api/rooms/available?checkInDate=${cheCkIn}&checkOutDate=${checkOut}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'accept: application/json',
+        }
+    });
+    return result.json();
+}
 export async function deleteRoom(id: number): Promise<Room> {
     const res = await fetch(`/api/rooms/${id}`, {
         method: 'DELETE',

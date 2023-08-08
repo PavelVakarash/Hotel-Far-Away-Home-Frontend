@@ -21,6 +21,7 @@ import RoomPage from '../features/rooms/RoomPage';
 import Events from '../features/events/Events';
 import MyReserve from '../features/reserve/MyReserve';
 import { LanguageProvider } from '../LanguageContext';
+import RoomsAvailable from '../features/rooms/RoomsAvailable';
 
 function App(): JSX.Element {
   const dispatch = useAppDispatch();
@@ -57,6 +58,7 @@ function App(): JSX.Element {
           </Route>
           <Route path="/rooms/create" element={<CreateRoom />} />
           <Route path="/my-reserve" element={<MyReserve />} />
+          <Route path="/rooms/available" element={<RoomsAvailable />} />
         </Route>
       </Routes>
     </HashRouter>

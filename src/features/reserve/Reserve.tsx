@@ -1,17 +1,31 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, FormEvent } from 'react';
+import { Link } from 'react-router-dom';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import style from './Reserve.module.css';
 import { LanguageContext } from '../../LanguageContext';
 import t from './translation';
+import { useAppDispatch } from '../../store';
+import { getAvailableRooms } from '../rooms/roomsSlice';
 
 function Reserve(): JSX.Element {
+  const dispatch = useAppDispatch();
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+   const [cheCkIn, setCheckIn] = useState<string>('');
+  // // eslint-disable-next-line @typescript-eslint/naming-convention
+   const [checkOut, setCheckOut] = useState<string>('');
+ function handleSubmit(event:FormEvent<HTMLFormElement>):void {
+  event.preventDefault();
+  dispatch(
+  getAvailableRooms({ cheCkIn, checkOut })
+  );
+ }
   const { language } = useContext(LanguageContext);
   return (
     <div className={style.testbox}>
       <div className={style.banner}>
         <h1 className={style.reserve_text}>{t('reservationForm', language)}</h1>
       </div>
-      <form className={style.form_cont}>
+      <form className={style.form_cont} onSubmit={handleSubmit}>
         <div className={style.form}>
           <div className={style.top}>
             <div className={style.field}>
@@ -21,6 +35,7 @@ function Reserve(): JSX.Element {
                 id="checkindate"
                 type="date"
                 name="checkindate"
+                onChange={(event) => setCheckIn(event.target.value)}
               />
             </div>
             <div className={style.field}>
@@ -30,6 +45,7 @@ function Reserve(): JSX.Element {
                 id="checkoutdate"
                 type="date"
                 name="checkoutdate"
+                onChange={(event) => setCheckOut(event.target.value)}
               />
             </div>
             <div className={style.field}>
@@ -61,9 +77,9 @@ function Reserve(): JSX.Element {
           </div>
         </div>
         <div className={style.btn_block}>
-          <button className={style.button} type="submit">
+          <Link to="/rooms/available" className={style.reserve}>
           {t('book', language)}
-          </button>
+          </Link>
         </div>
       </form>
     </div>
